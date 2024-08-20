@@ -13,7 +13,7 @@ function App() {
             <p className="text-3xl">React.js PWA</p>
             <button
                 className="btn"
-                onClick={() => setCount((count) => count + 1)}
+                onClick={() => setCount((count) => count.name.id + 1)}
             >
                 count is {count}
             </button>
