@@ -1,14 +1,14 @@
 import React from "react";
 import ReactGA from "react-ga4";
 
-class ErrorBoundary extends React.Component {
+export default class ErrorBoundary extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { hasError: false };
+        this.state = { hasError: false, error: null, errorInfo: null };
     }
 
     static getDerivedStateFromError(error) {
-        return { hasError: true };
+        return { hasError: true, error: error };
     }
 
     componentDidCatch(error, errorInfo) {
@@ -23,11 +23,15 @@ class ErrorBoundary extends React.Component {
 
     render() {
         if (this.state.hasError) {
-            return this.props.fallback || <h1>Something went wrong.</h1>;
+            return (
+                this.props.fallback || (
+                    <p className="text-center text-red-400">
+                        {this.state.error.toString()}
+                    </p>
+                )
+            );
         }
 
         return this.props.children;
     }
 }
-
-export default ErrorBoundary;
