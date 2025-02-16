@@ -1,6 +1,6 @@
 import ReactGA from "react-ga4";
 
-ReactGA.initialize("G-P8SBZFLMRG");
+ReactGA.initialize(import.meta.env.VITE_GA_MEASUREMENT_ID);
 
 export function initializeErrorTracking() {
     window.addEventListener("error", (event) => {

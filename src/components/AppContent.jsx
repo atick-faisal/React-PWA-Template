@@ -1,5 +1,5 @@
-import { useQuery } from "@tanstack/react-query";
-import { getDemoData } from "../api/demoApi.js";
+import {useQuery} from "@tanstack/react-query";
+import {getDemoData} from "../api/demoApi.js";
 
 export default function AppContent() {
     const demoQuery = useQuery({
@@ -16,7 +16,7 @@ export default function AppContent() {
     return (
         <>
             <p>{demoQuery.data.title}</p>
-            <img src={demoQuery.data.img} alt={demoQuery.data.alt} />
+            <img src={demoQuery.data.img} alt={demoQuery.data.alt}/>
         </>
     );
 }

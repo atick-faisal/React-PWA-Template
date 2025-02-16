@@ -4,11 +4,11 @@ import ReactGA from "react-ga4";
 export default class ErrorBoundary extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { hasError: false, error: null, errorInfo: null };
+        this.state = {hasError: false, error: null, errorInfo: null};
     }
 
     static getDerivedStateFromError(error) {
-        return { hasError: true, error: error };
+        return {hasError: true, error: error};
     }
 
     componentDidCatch(error, errorInfo) {
