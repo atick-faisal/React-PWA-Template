@@ -13,11 +13,11 @@ export default [
             globals: globals.browser,
             parserOptions: {
                 ecmaVersion: "latest",
-                ecmaFeatures: { jsx: true },
+                ecmaFeatures: {jsx: true},
                 sourceType: "module",
             },
         },
-        settings: { react: { version: "18.3" } },
+        settings: {react: {version: "18.3"}},
         plugins: {
             react,
             "react-hooks": reactHooks,
@@ -31,7 +31,7 @@ export default [
             "react/jsx-no-target-blank": "off",
             "react-refresh/only-export-components": [
                 "warn",
-                { allowConstantExport: true },
+                {allowConstantExport: true},
             ],
             "react/prop-types": "off",
         },
